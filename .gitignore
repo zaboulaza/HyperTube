@@ -1,0 +1,114 @@
+# =====================================================
+# DÉPENDANCES
+# =====================================================
+
+# Créé par : npm install
+# Contient toutes les librairies externes (Express, React, Prisma...)
+# Ignoré car énorme et recréable à partir de package.json
+node_modules/
+
+
+# =====================================================
+# CODE COMPILÉ
+# =====================================================
+
+# Créé par : la compilation TypeScript (tsc) côté back
+# Contient le JavaScript produit, celui que Node exécute
+# Ignoré car recréable en recompilant
+dist/
+
+# Créé par : npm run build côté front
+# Contient la version optimisée du site, prête à être servie
+# Ignoré car recréable en rebuildant
+build/
+
+# Créé par : TypeScript pendant la compilation
+# Cache qui accélère la compilation suivante
+# Ignoré car inutile aux autres
+*.tsbuildinfo
+
+
+# =====================================================
+# SECRETS
+# =====================================================
+
+# Créé par : toi, en copiant .env.example
+# Contient les vrais secrets : clés d'API, mots de passe, secrets OAuth
+# Ignoré car un secret poussé sur GitHub est compromis
+.env
+
+# Créé par : toi, si tu fais plusieurs configurations
+# Variantes du .env (.env.local, .env.production...)
+# Ignoré pour les mêmes raisons que .env
+.env.*
+
+# Exception : ce fichier-là est GARDÉ dans le repo
+# Modèle du .env avec les noms des variables mais sans valeur
+# Sert à ton binôme pour créer son propre .env
+!.env.example
+
+
+# =====================================================
+# DONNÉES PRODUITES PAR L'APPLICATION
+# =====================================================
+
+# Créé par : l'application qui tourne
+# Films téléchargés et sous-titres
+# Ignoré car ce sont des données de plusieurs Go, pas du code
+media/
+
+# Créé par : l'application qui tourne
+# Photos de profil envoyées par les utilisateurs
+# Ignoré car ce sont des données d'utilisateurs, pas du code
+uploads/
+
+# Créés par : le moteur torrent et ffmpeg
+# Fichiers vidéo
+# Ignorés car trop lourds (GitHub refuse les fichiers de plus de 100 Mo)
+*.mp4
+*.mkv
+*.avi
+*.webm
+
+# Créé par : le moteur torrent
+# Fichiers qui décrivent le contenu d'un torrent
+# Ignoré car ce sont des données de l'application
+*.torrent
+
+# Créés par : le module des sous-titres
+# .srt = format téléchargé, .vtt = format converti pour le navigateur
+# Ignorés car ce sont des données de l'application
+*.srt
+*.vtt
+
+
+# =====================================================
+# LOGS
+# =====================================================
+
+# Créés par : l'application, ou npm quand il plante
+# Historique de ce qui s'est passé pendant l'exécution
+# Ignorés car propres à ta machine, et ils peuvent contenir des infos sensibles
+logs/
+*.log
+
+
+# =====================================================
+# FICHIERS PROPRES À TA MACHINE OU À TON ÉDITEUR
+# =====================================================
+
+# Créé par : macOS, tout seul
+# Mémorise l'affichage du dossier dans le Finder
+.DS_Store
+
+# Créé par : Windows, tout seul
+# Cache des miniatures d'images
+Thumbs.db
+
+# Créé par : l'éditeur VS Code
+# Tes réglages personnels de l'éditeur
+.vscode/
+
+# Créé par : les éditeurs JetBrains (WebStorm...)
+# Tes réglages personnels de l'éditeur
+.idea/
